@@ -41,8 +41,8 @@ jobs:
             - name: Pin Logos (avoid %orig regression in 777925d)
               run: |
                 cd ${{ github.workspace }}/theos/vendor/logos
-                git fetch --depth 1 origin a623700
-                git checkout a623700
+                git fetch --depth 1 origin a62370066a97e36d59b200a9fa10c5091f5e8972
+                git checkout a62370066a97e36d59b200a9fa10c5091f5e8972
         
             - name: SDK Caching
               id: SDK
