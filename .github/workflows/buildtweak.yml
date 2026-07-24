@@ -37,6 +37,12 @@ jobs:
                 ref: master
                 path: ${{ github.workspace }}/theos
                 submodules: recursive
+
+            - name: Pin Logos (avoid %orig regression in 777925d)
+              run: |
+                cd ${{ github.workspace }}/theos/vendor/logos
+                git fetch --depth 1 origin a623700
+                git checkout a623700
         
             - name: SDK Caching
               id: SDK
